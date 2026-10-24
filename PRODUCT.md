@@ -21,7 +21,7 @@ Personal study on a Windows laptop. Existing course report is in English. User e
 StudyTask name. User requests deliberate, distinctive design, avoiding generic AI-generated layouts. An operative desktop interface must remain easy to scan and use.
 
 ## Evidence
-StudyTask.docx, Lecture_Project Description.pdf, Lecture_Project Template - Tagged.pdf and DESIGN.md contain the course requirements and accepted software architecture. No existing UI or visual assets.
+The course documents are kept locally and excluded from the public repository. DESIGN.md records the accepted software architecture. No existing UI or visual assets.
 
 ## Product principles
 Keep the task list visible during editing. Preserve input on errors. Express status and priority with words as well as color. Keep UI independent from domain validation. Use keyboard-accessible native controls.

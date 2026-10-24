@@ -5,3 +5,17 @@ tmp/
 .idea/
 *.iml
 .impeccable/questions/
+.env
+.env.*
+*.log
+.vscode/
+.classpath
+.project
+.settings/
+.DS_Store
+Thumbs.db
+tasks.xml
+tasks-*.tmp
+Lecture_Project Description.pdf
+Lecture_Project Template - Tagged.pdf
+StudyTask.docx

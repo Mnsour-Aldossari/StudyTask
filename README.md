@@ -12,7 +12,7 @@ For development, install JDK 21+ and Maven, then run from the project folder:
 .\run.ps1
 ```
 
-The script builds the sources and runs them using the installed JDK. The first build downloads dependencies from Maven Central. Set `JAVA_HOME` to your JDK if necessary. JavaFX dependency setup follows the [official OpenJFX Maven guide](https://openjfx.io/openjfx-docs/maven).
+The script builds the sources and runs them using the installed JDK. It runs Maven offline, so dependencies must already be available in `.maven-cache`; otherwise it stops without downloading anything. To populate that cache deliberately, run Maven without its offline flag once. Set `JAVA_HOME` to your JDK if necessary. JavaFX dependency setup follows the [official OpenJFX Maven guide](https://openjfx.io/openjfx-docs/maven).
 
 ## Use
 
