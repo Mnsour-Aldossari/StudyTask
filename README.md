@@ -22,7 +22,7 @@ For development, the script builds the sources and runs them using the installed
 
 Enter a title, course and deadline, select a priority, then click **Add task**. A description is optional. Select a task row to edit it, change its priority, mark it completed/pending or delete it. Course navigation, status tabs and search combine to narrow the list. **Clear filters** restores all tasks. Ctrl+N starts a new task; Ctrl+S saves the current form. Dates use `yyyy-mm-dd` or the calendar picker.
 
-The empty screen offers **Load example tasks** for a clearly labeled demonstration session. Normal startup is empty when there are no saved tasks. Every task change is saved automatically and loaded again when the app opens. On Windows, the data file is `%APPDATA%\StudyTask\tasks.xml`; it stays on the computer even if the portable app folder is moved or replaced. If that file cannot be read or written, the app reports the error without silently discarding the change. Tasks created with the older session-only release and already lost on closing cannot be recovered by this update.
+The empty screen offers **Load example tasks** for a clearly labeled demonstration session. Normal startup is empty when there are no saved tasks. Every task change is saved automatically and loaded again when the app opens. On Windows, the data file is `%APPDATA%\StudyTask\tasks.xml`; it stays on the computer even if the portable app folder is moved or replaced. If that file cannot be read or written, the app reports the error without silently discarding the change.
 
 ## Tests
 
