@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T22:14:15.9019721Z",
+  "title": "Design System: StudyTask",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Cool Ground"
+      },
+      "success": {
+        "role": "semantic",
+        "displayName": "Completion Green"
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Action Blue"
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Danger Red"
+      },
+      "shell": {
+        "role": "neutral",
+        "displayName": "Campus Navy"
+      },
+      "timing": {
+        "role": "semantic",
+        "displayName": "Timing Amber"
+      }
+    },
+    "typographyMeta": {
+      "body": {
+        "purpose": "Native task controls and body copy.",
+        "displayName": "Body"
+      },
+      "metadata": {
+        "purpose": "Dates, summaries and hints.",
+        "displayName": "Metadata"
+      },
+      "status": {
+        "purpose": "Pending and Completed labels.",
+        "displayName": "State"
+      }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "condition": "TaskView width < 1150",
+        "value": "1150px"
+      }
+    ],
+    "nativePlatform": "JavaFX on Windows; CSS uses -fx properties. No fabricated HTML previews or unused tonal ramps.",
+    "nativeComponents": [
+      {
+        "name": "Primary Button",
+        "kind": "button",
+        "selectors": [
+          ".button",
+          ".primary",
+          ".primary:hover",
+          ".primary:pressed",
+          ".button:focused",
+          ".button:disabled"
+        ],
+        "nativeCss": ".button { -fx-cursor: hand; -fx-padding: 10 15; -fx-background-radius: 6; -fx-border-radius: 6; -fx-font-weight: bold; }\n.primary { -fx-background-color: #285d89; -fx-text-fill: white; }\n.primary:hover { -fx-background-color: #1c4b73; }\n.primary:pressed { -fx-background-color: #153d60; }",
+        "refersTo": "button-primary"
+      },
+      {
+        "name": "Secondary Button",
+        "kind": "button",
+        "selectors": [
+          ".secondary-button",
+          ".secondary-button:hover"
+        ],
+        "nativeCss": ".secondary-button { -fx-background-color: #eef3f8; -fx-text-fill: #244d70; }\n.secondary-button:hover { -fx-background-color: #e0eaf4; }",
+        "refersTo": "button-secondary"
+      },
+      {
+        "name": "Delete Button",
+        "kind": "button",
+        "selectors": [
+          ".danger-button",
+          ".danger-button:hover"
+        ],
+        "nativeCss": ".danger-button { -fx-background-color: #fff1ef; -fx-text-fill: #9e3c35; }\n.danger-button:hover { -fx-background-color: #f9dedb; }",
+        "refersTo": "button-danger"
+      },
+      {
+        "name": "Text Field",
+        "kind": "input",
+        "selectors": [
+          ".text-field",
+          ".text-field:focused"
+        ],
+        "nativeCss": ".text-field { -fx-padding: 10 11; }",
+        "refersTo": "input"
+      },
+      {
+        "name": "Course Navigation",
+        "kind": "nav",
+        "selectors": [
+          ".course-button",
+          ".course-button:hover",
+          ".course-selected"
+        ],
+        "nativeCss": ".course-button { -fx-background-color: transparent; -fx-padding: 11 10; -fx-alignment: center-left; -fx-background-radius: 6; }\n.course-button:hover { -fx-background-color: #304e68; }\n.course-selected { -fx-background-color: #3d5e7a; }"
+      },
+      {
+        "name": "Pending Label",
+        "kind": "chip",
+        "selectors": [
+          ".status-pending"
+        ],
+        "nativeCss": ".status-pending { -fx-background-color: #edf1f5; -fx-text-fill: #455d72; -fx-background-radius: 4; -fx-padding: 4 6; -fx-font-size: 11px; }",
+        "refersTo": "status-pending"
+      },
+      {
+        "name": "Completed Label",
+        "kind": "chip",
+        "selectors": [
+          ".status-complete"
+        ],
+        "nativeCss": ".status-complete { -fx-background-color: #e5f1eb; -fx-text-fill: #24624b; -fx-background-radius: 4; -fx-padding: 4 6; -fx-font-size: 11px; }",
+        "refersTo": "status-completed"
+      },
+      {
+        "name": "Task Table",
+        "kind": "custom",
+        "selectors": [
+          ".table-view",
+          ".table-row-cell",
+          ".table-row-cell:filled:hover",
+          ".table-row-cell:filled:selected",
+          ".table-cell"
+        ],
+        "nativeCss": ".table-view { -fx-background-color: #ffffff; -fx-border-color: #d6dfe8; -fx-border-width: 1; -fx-padding: 0; }\n.table-row-cell { -fx-background-color: #ffffff; -fx-border-color: #e4eaf0; -fx-border-width: 0 0 1 0; -fx-padding: 0; }\n.table-row-cell:filled:hover { -fx-background-color: #f0f5fa; -fx-cursor: hand; }\n.table-row-cell:filled:selected { -fx-background-color: #e6eff8; }\n.table-cell { -fx-border-width: 0; -fx-padding: 9 10; -fx-alignment: center-left; }"
+      }
+    ],
+    "focus": {
+      "fields": "-fx-border-color: #285d89; -fx-border-width: 2; -fx-border-insets: -1;",
+      "buttons": "-fx-border-color: #4389be; -fx-border-width: 2; -fx-border-insets: -2;"
+    },
+    "disabled": {
+      "purpose": "Buttons and status toggles.",
+      "value": "-fx-opacity: 0.45;"
+    },
+    "sources": [
+      "src/main/resources/studytask.css",
+      "src/main/java/studytask/view/TaskView.java",
+      "src/main/java/studytask/StudyTaskApp.java"
+    ],
+    "evidence": [
+      ".impeccable/review/desktop.png",
+      ".impeccable/review/compact.png",
+      ".impeccable/review/empty.png",
+      ".impeccable/review/error.png"
+    ],
+    "notCanonized": "Inherited Segoe UI display face is a craft-floor defect; typography redesign is outside this documentation pass. Provisional direction type and spacing differ from shipped values."
+  },
+  "components": [],
+  "narrative": {
+    "northStar": "Campus wayfinding",
+    "overview": "The native JavaFX workspace uses a navy course rail, a quiet cool ground and aligned task rows to make course, deadline and state easy to scan. Blue identifies actions and selection; timing and completion receive restrained semantic color and explicit words.\n\nThis is a code-led record of the implemented desktop surface, with no approved visual comp. Evidence is `src/main/resources/studytask.css`, `src/main/java/studytask/view/TaskView.java`, `PRODUCT.md`, `.impeccable/surfaces/workspace.md` and the desktop, compact, empty and error captures in `.impeccable/review/`. The existing course architecture follows these visual sections unchanged.",
+    "keyCharacteristics": [
+      "Native controls with visible keyboard focus.",
+      "Aligned task rows with course and relative deadline context.",
+      "Flat surfaces separated by tone and fine borders.",
+      "Adjacent editing with persistent actions and retained input on errors."
+    ],
+    "rules": [
+      {
+        "name": "The Words With State Rule",
+        "section": "colors",
+        "body": "Pair semantic color with explicit status, priority or relative deadline text."
+      },
+      {
+        "name": "The Persistent Actions Rule",
+        "section": "layout",
+        "body": "Scroll the editor fields independently while keeping feedback and save, status, clear and delete actions in the editor's bottom region."
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "section": "elevation",
+        "body": "Use tone and borders to separate the workspace regions."
+      }
+    ],
+    "dos": [
+      "Do pair semantic color with explicit status, priority or relative deadline text.",
+      "Do keep the task list visible while editing and preserve input on errors.",
+      "Do keep action feedback and editor actions outside the scrollable fields.",
+      "Do use native controls with visible focus and associated field labels."
+    ],
+    "donts": [
+      "Don't treat the provisional direction sizes as shipped typography values.",
+      "Don't introduce decorative shadows or motion into the flat workspace without an approved system change.",
+      "Don't promote the inherited system display face into a reusable display-font rule."
+    ]
+  }
+}

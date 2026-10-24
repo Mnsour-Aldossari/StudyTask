@@ -1,0 +1,8 @@
+target/
+dist/
+.maven-cache/
+tmp/
+.idea/
+*.iml
+.impeccable/questions/
+StudyTask-portable.zip
