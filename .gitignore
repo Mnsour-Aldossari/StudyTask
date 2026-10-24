@@ -5,6 +5,10 @@ tmp/
 .idea/
 *.iml
 *.zip
+*.jar
+Start-StudyTask.cmd
+runtime/
+lib/
 .impeccable/questions/
 .env
 .env.*
