@@ -14,6 +14,6 @@ Type: Segoe UI 13 base; 12 metadata; 16 pane title; 26 page title; 20 brand. 8/1
 
 Layout: 188px course rail; flexible work area with title, search, status controls and task table; 310px scrollable editor. At compact desktop widths rail becomes a course combo above the table, editor narrows to 280px. Minimum window 900x640. Screens tested at 1280x820 and 960x680.
 
-States: empty task list with New task and optional Load example tasks; no filter results with clear action; selected task edits; inline error retaining input; explicit deletion confirmation; visible automatic local storage note. Keyboard Ctrl+N for new, Ctrl+S to save; native Tab navigation and focus rings. No motion needed.
+States: empty task list with New task and optional Load example tasks; no filter results with clear action; selected task edits; inline error retaining input; explicit deletion confirmation; visible automatic save to `%APPDATA%\StudyTask\tasks.xml`. Keyboard Ctrl+N for new, Ctrl+S to save; native Tab navigation and focus rings. No motion needed.
 
 Finish evidence: .impeccable/review/desktop.png, compact.png, empty.png, error.png. UI smoke tests additionally exercise add/edit/delete, priority, status and combined filtering.

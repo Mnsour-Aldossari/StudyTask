@@ -2,17 +2,21 @@
 
 A JavaFX desktop app for university assignments, projects and exams. Implements the seven course requirements using MVC, an Observer interface and an immutable Task ADT.
 
-## Run
+## طريقة التشغيل
+
+- **المتطلبات:** JDK 21 أو أحدث، وMaven مثبت ومتاح من سطر الأوامر.
+- **البناء:** `mvn clean package`
+- **التشغيل:** `.\run.ps1`
+- **الاختبارات:** `.\run.ps1 -Test`
+- **بيانات المهام:** تُحفظ تلقائيًا في `%APPDATA%\StudyTask\tasks.xml` على Windows.
+
+يستخدم `run.ps1` Maven بالوضع العادي افتراضيًا، فيحمّل الاعتمادات الناقصة إلى `.maven-cache` عند توفر الإنترنت. للتشغيل دون إنترنت بعد اكتمال الاعتمادات، استخدم `.\run.ps1 -Offline` أو `.\run.ps1 -Test -Offline`.
+
+## Portable app
 
 Open `Start-StudyTask.cmd` in the portable folder. Keep that entire folder together: it includes the Java runtime and JavaFX libraries. No Java installation is needed for that packaged copy. On Windows, place the portable folder under a path containing only English letters and digits, such as `C:\StudyTask`; this JDK's native launcher fails to start from the Arabic path of this source project.
 
-For development, install JDK 21+ and Maven, then run from the project folder:
-
-```powershell
-.\run.ps1
-```
-
-The script builds the sources and runs them using the installed JDK. It runs Maven offline, so dependencies must already be available in `.maven-cache`; otherwise it stops without downloading anything. To populate that cache deliberately, run Maven without its offline flag once. Set `JAVA_HOME` to your JDK if necessary. JavaFX dependency setup follows the [official OpenJFX Maven guide](https://openjfx.io/openjfx-docs/maven).
+For development, the script builds the sources and runs them using the installed JDK. Set `JAVA_HOME` to your JDK if necessary. JavaFX dependency setup follows the [official OpenJFX Maven guide](https://openjfx.io/openjfx-docs/maven).
 
 ## Use
 
@@ -56,4 +60,4 @@ Packaging creates a portable folder with a trimmed Java runtime using JDK `jlink
 
 2026-10-24: nine model tests, three persistence tests and the JavaFX workflow test passed. The packaged application also started with its bundled runtime. Screens captured at 1280x820 and 960x680, plus empty and error states. JUnit's classpath-based JavaFX test startup prints an unnamed-module warning; it did not fail the tests.
 
-The report's Implementation and Lessons learned sections still need the final course write-up. No GitHub repository has been published by this build.
+The report's Implementation and Lessons learned sections still need the final course write-up.

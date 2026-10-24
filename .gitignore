@@ -4,6 +4,7 @@ dist/
 tmp/
 .idea/
 *.iml
+*.zip
 .impeccable/questions/
 .env
 .env.*

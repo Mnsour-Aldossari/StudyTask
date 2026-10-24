@@ -1,4 +1,4 @@
-param([switch]$Test, [switch]$UiTest, [switch]$Package)
+param([switch]$Test, [switch]$UiTest, [switch]$Package, [switch]$Offline)
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath $PSScriptRoot
 if (-not $env:JAVA_HOME) {
@@ -7,7 +7,8 @@ if (-not $env:JAVA_HOME) {
 }
 $maven = Get-Command mvn.cmd -ErrorAction SilentlyContinue
 if (-not $maven) { throw 'Install Maven and JDK 21 or later, then reopen PowerShell.' }
-$taskArgs = @('-o', '-Dmaven.repo.local=.maven-cache', '-ntp')
+$taskArgs = @('-Dmaven.repo.local=.maven-cache', '-ntp')
+if ($Offline) { $taskArgs += '-o' }
 if ($UiTest) { $taskArgs += @('-Pui-test', 'test') }
 elseif ($Test) { $taskArgs += 'test' }
 elseif ($Package) { $taskArgs += @('package', 'dependency:copy-dependencies', '-DincludeScope=runtime', '-DoutputDirectory=target/lib') }
